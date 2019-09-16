@@ -1,0 +1,51 @@
+# External gems
+# See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
+plugins:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-sitemap
+  - jekyll-paginate
+
+
+exclude:
+  - "/vendor/"
+
+# Site settings
+title: ""
+subtitle: ""
+email: askme@dbfirst.kr
+name: TANGO
+
+description: >
+  TANGO의 활동 방향을 보여주는 블로그.
+
+baseurl: "" 
+port:    80
+host:    0.0.0.0
+cover: "/assets/header_image.jpg"
+logo: "/assets/logo.png"
+
+# Build settings
+
+encoding: "utf-8"
+markdown: kramdown
+paginate: 5
+paginate_path: "/page:num/"
+inter_post_navigation: false
+highlightjs_theme: "monokai-sublime"
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
+
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."
+
